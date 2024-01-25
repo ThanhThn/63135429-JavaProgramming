@@ -11,6 +11,9 @@ public class Lab2Bai1 {
 		double a = scanner.nextDouble();
 		System.out.print("Nhập b:");
 		double b = scanner.nextDouble();
+		phuongTrinhBac1(a, b);
+	}
+	public static void phuongTrinhBac1(double a, double b) {
 		if(a == 0) {
 			if (b == 0) {
 				System.out.print("Phương trình vô số nghiệm");
@@ -23,5 +26,4 @@ public class Lab2Bai1 {
 			System.out.print("Phương trình có nghiệm: x = " + x);
 		}
 	}
-
 }
