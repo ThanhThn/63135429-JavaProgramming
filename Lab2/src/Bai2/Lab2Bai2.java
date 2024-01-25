@@ -32,7 +32,7 @@ public class Lab2Bai2 {
 			if(delta > 0) {
 				double x1 = (-b + Math.sqrt(delta)) / (2 * a);
 				double x2 = (-b - Math.sqrt(delta)) / (2 * a);
-				System.out.print("Phương trình có nghiệm: x1 = " + x1 + "và x2 = " + x2);
+				System.out.print("Phương trình có nghiệm: x1 = " + x1 + " và x2 = " + x2);
 				return;
 			}
 		}
