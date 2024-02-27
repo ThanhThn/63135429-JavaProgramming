@@ -20,7 +20,6 @@ public class WindowForm {
 		f.setLayout(new FlowLayout());
 		//Create Button
 		JButton btn1 = new JButton("Click Me");
-		btn1.addActionListener();
 		JButton btn2 = new JButton("Click Here");
 		
 		f.add(btn2);
