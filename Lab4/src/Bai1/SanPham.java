@@ -52,7 +52,6 @@ public class SanPham {
         donGia = scanner.nextDouble();
         System.out.print("Nhập giảm giá : ");
         giamGia = scanner.nextDouble();
-        scanner.close();
     }
     public void xuat(){
         System.out.println(String.format("Tên sản phẩm : %s | Đơn giá : %s | Giảm giá : %s | Thuế nhập khẩu : %s",tenSp,donGia,giamGia,getThueNhapKhau()));
