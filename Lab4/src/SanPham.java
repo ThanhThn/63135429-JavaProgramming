@@ -1,10 +1,10 @@
-package Bai1;
+
 
 import java.util.Scanner;
 
 public class SanPham {
-	String tenSp;
-	double donGia, giamGia;
+	private String tenSp;
+	private double donGia, giamGia;
 	public SanPham() {
 
     }
