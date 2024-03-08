@@ -10,44 +10,47 @@ public class SinhVien {
     String SoDienThoai;
     String CMND;
 
-    public void setEmail(String email) {
-        Pattern pattern = Pattern.compile("\"^[\\\\w\\\\.-]+@[a-zA-Z\\\\d]+\\\\.[a-zA-Z]{2,}$\"");
-        if (pattern.matcher(email).find()){
+    private void setEmail(String email) {
+    	String reGexEmail = "^[\\w.-]+@[a-zA-Z\\d]+\\.[a-zA-Z]{2,}$";
+        if (email.matches(reGexEmail)){
             this.Email = email;
         }else {
             System.out.println("Email không hợp lệ");
-            setSoDienThoai(NhapLai("Email"));
+            email = NhapLai("Email");
+            setSoDienThoai(email);
         }
     }
-    public void setSoDienThoai(String soDienThoai) {
-        Pattern pattern = Pattern.compile("^[\\d]{10}+$");
-        if (pattern.matcher(soDienThoai).find()){
+    private void setSoDienThoai(String soDienThoai) {
+    	String reGexStd = "^[\\d]{10}$";
+        if (soDienThoai.matches(reGexStd)){
             this.SoDienThoai = soDienThoai;
         }else {
             System.out.println("Số điện thoại không hợp lệ");
-            setSoDienThoai(NhapLai("Số điện thoại"));
+            soDienThoai = NhapLai("Số điện thoại");
+            setSoDienThoai(soDienThoai);
         }
     }
 
-    public void setCMND(String CMND) {
-        Pattern pattern = Pattern.compile("^[\\d]{9}+$");
-        if (pattern.matcher(CMND).find()){
+    private void setCMND(String CMND) {
+    	String reGexCmnd = "^[\\d]{9}$";
+        if (CMND.matches(reGexCmnd)){
             this.CMND = CMND;
         }else {
             System.out.println("CMND không hợp lệ");
+            CMND = NhapLai("Số CMND");
             setSoDienThoai(NhapLai("Số CMND"));
         }
     }
 
 
-    public String NhapLai(String thongTin){
+    private String NhapLai(String thongTin){
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Nhập lại : %s",thongTin);
+        System.out.printf("Nhập lại %s: ",thongTin);
         String duLieu = scanner.nextLine();
         return duLieu;
     }
     void xuat(){
-        System.out.println(String.format("Họ tên : %s | Email : %s | Số điện thoại : %s | CMND : %s",hoTen,Email,SoDienThoai,CMND));
+        System.out.println(String.format("Họ tên : %s | Email : %s | Số điện thoại : %s | CMND : %s", hoTen, Email, SoDienThoai, CMND));
     }
 
     void nhap(){
@@ -55,11 +58,14 @@ public class SinhVien {
         System.out.print("Nhập họ tên sinh viên : ");
         hoTen = scanner.nextLine();
         System.out.print("Nhập Email : ");
-        setEmail(scanner.nextLine());
+        String email = scanner.nextLine();
+        setEmail(email);
         System.out.print("Nhập số điện thoại : ");
-        setSoDienThoai(scanner.nextLine());
+        String sdt = scanner.nextLine();
+        setSoDienThoai(sdt);
         System.out.print("Nhập CMND : ");
-        setCMND(scanner.nextLine());
+        String cmnd = scanner.nextLine();
+        setCMND(cmnd);
 
     }
 }
