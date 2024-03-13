@@ -6,7 +6,7 @@ public class SinhVienIT extends SinhVienPoly{
     double diemJava, diemCss, diemHtml;
 
     public SinhVienIT(String hoTen, double diemJava, double diemCss, double diemHtml) {
-        super(hoTen, "Công nghê thông tin");
+        super(hoTen, "Công nghệ thông tin");
         this.diemJava = diemJava;
         this.diemCss = diemCss;
         this.diemHtml = diemHtml;

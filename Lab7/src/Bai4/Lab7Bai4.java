@@ -49,10 +49,9 @@ public class Lab7Bai4 {
 	        	scanner.nextLine();
 	        	System.out.print("Nhập tên sinh viên : ");
 	            String ten = scanner.nextLine();
-	            System.out.println(ten);
 	            System.out.print("Nhập ngành (1: IT, 2: Marketing) : ");
 	            int nganh = scanner.nextInt();
-	            scanner.nextLine(); // Consume the newline character
+	            scanner.nextLine();
 	            if(nganh == 1) {
 	                System.out.print("Nhập điểm HTML : ");
 	                Double diemHtml = scanner.nextDouble();
